@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+    // Constructor function
+    function Person(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+
+    // Object accessor using get keyword
+    Object.defineProperty(this, "data", {
+        get: function() {
+        return "Name: " + this.name + ", Age:" + this.age + ", Gender: " + this.gender;
+        }
+    });
+    }
+
+    // using new keyword
+    const princy = new Person("princy Kanpariya", 18, "Female");
+    console.log(princy.data); 
+    Hello.call(princy);
+
+    const Nency = new Person("Nency Mavani", 18, "Female");
+    console.log(Nency.data); 
+    Hello.call(Nency);
+
+    // Adding new property 
+    princy.gender = "Female";
+    Nency.gender = "Female";
+
+    function Hello() {
+    console.log("Hello, " + this.name + "!");
+    }
+
+</script>
